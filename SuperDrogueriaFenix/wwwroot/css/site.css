@@ -9,7 +9,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: lightcyan;
 }
 
 .btn-primary {
@@ -76,18 +76,18 @@ body {
     background-color:#73AB84;
 
 }
-    .main-nav a {
+.main-nav a {
         color:#FFF !important;
-    }
-    .main-nav{
-        float:right;
-    }
+}
+.main-nav{
+        float: right;
+}
 /* Boton producto */
 .btn-primary{
     border-color:#384C39;
     background-color:#99D19C;
 }
-
+/*Selector*/
 .btn-primary:hover{
     background-color:#384C39;
 }
