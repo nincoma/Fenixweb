@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using SuperDrogueriaFenix.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace SuperDrogueriaFenix.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Message = "Registrar Un Producto";
             return View();
         }
 
@@ -28,9 +30,16 @@ namespace SuperDrogueriaFenix.Controllers
             return View();
         }
 
-        public IActionResult Producto()//Agregamos en home controles la vista
+        public IActionResult Producto()//Agregamos en home controles la vista "Encuentra su producto Ideal"
         {
-            ViewBag.Message = "Encuentra su producto Ideal";
+            ViewBag.Message = "Resgistrar Producto";
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Producto(Producto producto)//Usamos modelo, probando el formulario
+        {
+            ViewBag.Message = "Se ha registrado el producto:" + producto.Nombre;
             return View();
         }
 
