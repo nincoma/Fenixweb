@@ -28,6 +28,14 @@ namespace SuperDrogueriaFenix.Controllers
             return View();
         }
 
+        public IActionResult Producto()
+        {
+            ViewBag.Message = "Encuentra su producto Ideal";
+            return View();
+        }
+
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
