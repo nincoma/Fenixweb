@@ -69,3 +69,31 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* BARRA DE NAVEGACION*/
+
+.main-nav{
+    background-color:#73AB84;
+
+}
+    .main-nav a {
+        color:#FFF !important;
+    }
+    .main-nav{
+        float:right;
+    }
+/* Boton producto */
+.btn-primary{
+    border-color:#384C39;
+    background-color:#99D19C;
+}
+
+.btn-primary:hover{
+    background-color:#384C39;
+}
+
+/* Label H2 */
+h2{
+    color:#8F8073;
+}
+

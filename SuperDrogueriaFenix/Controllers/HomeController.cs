@@ -28,7 +28,7 @@ namespace SuperDrogueriaFenix.Controllers
             return View();
         }
 
-        public IActionResult Producto()
+        public IActionResult Producto()//Agregamos en home controles la vista
         {
             ViewBag.Message = "Encuentra su producto Ideal";
             return View();
