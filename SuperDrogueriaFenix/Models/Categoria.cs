@@ -14,5 +14,10 @@ namespace SuperDrogueriaFenix.Models
         public bool Activo { get; set; }
         public DateTime FechaRegistro { get; set; }
 
+
+        public Producto Producto { get; set; }
+
+
+
     }
 }

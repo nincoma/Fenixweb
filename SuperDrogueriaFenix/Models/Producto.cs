@@ -17,6 +17,11 @@ namespace SuperDrogueriaFenix.Models
         public int IdCategoria { get; set; }
         public int Activo { get; set; }
 
+        public ICollection<Categoria> Categorias { get; set; }
+        public Proveedor Proveedor { get; set; }
+
+
+
 
         /*public Categoria oCategoria { get; set; }
         public bool Activo { get; set; }*/

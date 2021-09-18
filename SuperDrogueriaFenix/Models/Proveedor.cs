@@ -17,5 +17,8 @@ namespace SuperDrogueriaFenix.Models
         public String Direccion { get; set; }
         public bool Activo { get; set; }
 
+
+        public ICollection<Producto> Productos { get; set; }
+
     }
 }
