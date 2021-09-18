@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SuperDrogueriaFenix.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,5 +14,10 @@ namespace SuperDrogueriaFenix.Data
         {
 
         }
+
+        public virtual DbSet<Producto> Productos { get; set; }
+        public virtual DbSet<Proveedor> Proveedors { get; set; }
+        public virtual DbSet<Categoria> Categorias { get; set; }
+
     }
 }

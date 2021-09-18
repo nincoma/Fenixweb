@@ -72,8 +72,8 @@ body {
 
 /* BARRA DE NAVEGACION*/
 
-.main-nav{
-    background-color:#73AB84;
+.main-nav {
+    background-color:inherit;
 
 }
 .main-nav a{

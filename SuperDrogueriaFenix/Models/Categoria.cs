@@ -10,8 +10,18 @@ namespace SuperDrogueriaFenix.Models
     {
         [Key]
         public int IdCategoria { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public String Descripcion { get; set; }
+
+        [Required]
         public bool Activo { get; set; }
+
+        [Required]
+        [Display(Name = "Fecha de Registro")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime FechaRegistro { get; set; }
 
 
