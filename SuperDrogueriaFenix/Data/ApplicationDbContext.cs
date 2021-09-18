@@ -18,6 +18,9 @@ namespace SuperDrogueriaFenix.Data
         public virtual DbSet<Producto> Productos { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<Categoria> Categorias { get; set; }
+        public DbSet<SuperDrogueriaFenix.Models.Tienda> Tienda { get; set; }
+        public DbSet<SuperDrogueriaFenix.Models.Cliente> Cliente { get; set; }
+        public DbSet<SuperDrogueriaFenix.Models.ProductoTienda> ProductoTienda { get; set; }
 
     }
 }
