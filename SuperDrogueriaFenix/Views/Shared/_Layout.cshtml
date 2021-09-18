@@ -10,31 +10,32 @@
 <body>
     <header id="header" class="hoc clear">
         <!--menu-nav-->
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 main-nav">
-            <div class="container">
-                <!--Inicio-->
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <!--d-sm-inline-flex justify-content-between-->
-                    <ul class="navbar-nav menu-nav flex-grow-1">
-                        <!--menu-nav fin ("flex-grow-1"pasamos a css check style)-->
-                        <li>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Producto">Producto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Proveedor">Proveedor</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Categoria</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 main-nav"></nav>
+            <nav class="navbar-expand-md navbar-light bg-light border-3 border-bottom border-primary">
+        <div class="container-fluid">
+            <!--Inicio-->
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <!--d-sm-inline-flex justify-content-between-->
+                <ul class="navbar-nav menu-nav flex-grow-1">
+                    <!--menu-nav fin ("flex-grow-1"pasamos a css check style)-->
+                    <li>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Proveedor" asp-action="Index">Proveedor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Categoria" asp-action="Index">Categoria</a>
+                    </li>
+                </ul>
+                <partial name="_LoginPartial" />
             </div>
+        </div>
         </nav>
     </header>
     <div class="container">
