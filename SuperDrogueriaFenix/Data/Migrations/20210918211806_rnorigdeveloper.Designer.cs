@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperDrogueriaFenix.Data;
 
-namespace SuperDrogueriaFenix.Migrations
+namespace SuperDrogueriaFenix.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210918211806_rnorigdeveloper")]
+    partial class rnorigdeveloper
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -286,7 +288,7 @@ namespace SuperDrogueriaFenix.Migrations
 
                     b.HasKey("IdCliente");
 
-                    b.ToTable("Cliente");
+                    b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("SuperDrogueriaFenix.Models.Producto", b =>
@@ -349,10 +351,6 @@ namespace SuperDrogueriaFenix.Migrations
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("Iniciado")
-                        .HasMaxLength(30)
-                        .HasColumnType("bit");
-
                     b.Property<decimal>("PrecioUnidadCompra")
                         .HasColumnType("decimal(18,2)");
 
@@ -371,7 +369,7 @@ namespace SuperDrogueriaFenix.Migrations
 
                     b.HasIndex("TiendaIdTienda");
 
-                    b.ToTable("ProductoTienda");
+                    b.ToTable("ProductoTiendas");
                 });
 
             modelBuilder.Entity("SuperDrogueriaFenix.Models.Proveedor", b =>
@@ -441,17 +439,17 @@ namespace SuperDrogueriaFenix.Migrations
 
                     b.Property<string>("RUC")
                         .IsRequired()
-                        .HasMaxLength(60)
-                        .HasColumnType("nvarchar(60)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Telefono")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("IdTienda");
 
-                    b.ToTable("Tienda");
+                    b.ToTable("Tiendas");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

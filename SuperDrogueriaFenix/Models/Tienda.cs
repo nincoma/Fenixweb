@@ -8,32 +8,37 @@ namespace SuperDrogueriaFenix.Models
 {
     public class Tienda
     {
-
         [Key]
         public int IdTienda { get; set; }
 
         [Required]
-        [StringLength(60)]
-        public string Nombre { get; set; }
+        [StringLength(50)]
+        public String Nombre { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string RUC { get; set; }
+        public String Rut { get; set; }
 
+        [Required]
         [StringLength(100)]
-        [Display(Name = "Dirección")]
-        public string Direccion { get; set; }
-
+        public String Direccion { get; set; }
+                
         [Required]
         [StringLength(50)]
-        public string Telefono { get; set; }
+        public String Telefono { get; set; }
 
         [Required]
         public bool Activo { get; set; }
 
+        [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Fecha Registro")]
         public DateTime FechaRegistro { get; set; }
+
+        /*ER*/
+        public ICollection<Cliente> Clientes { get; set; }
+        public ProductoTienda ProductoTienda { get; set; }
+
     }
 }

@@ -54,7 +54,7 @@ namespace SuperDrogueriaFenix.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdTienda,Nombre,RUC,Direccion,Telefono,Activo,FechaRegistro")] Tienda tienda)
+        public async Task<IActionResult> Create([Bind("IdTienda,Nombre,Rut,Direccion,Telefono,Activo,FechaRegistro")] Tienda tienda)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace SuperDrogueriaFenix.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdTienda,Nombre,RUC,Direccion,Telefono,Activo,FechaRegistro")] Tienda tienda)
+        public async Task<IActionResult> Edit(int id, [Bind("IdTienda,Nombre,Rut,Direccion,Telefono,Activo,FechaRegistro")] Tienda tienda)
         {
             if (id != tienda.IdTienda)
             {

@@ -40,9 +40,9 @@ namespace SuperDrogueriaFenix.Models
         [Display(Name = "Fecha Registro")]
         public DateTime FechaRegistro { get; set; }
 
+        /*ER*/
 
-
-
+        public Tienda Tienda { get; set; }
 
     }
 }
